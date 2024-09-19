@@ -1,0 +1,351 @@
+/* Define Color Variables */
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+/* General Styling */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    /* background-color: var(--second-bg-color); */
+    background-color: antiquewhite;
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+header .logo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    /* color: var(--text-color); */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    position: relative;
+}
+
+nav ul li a:hover {
+    /* color: var(--main-color); */
+    color: black;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: .5s;
+} 
+nav ul li a:hover::after{
+    transform:scaleX(1);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    /* background: linear-gradient(135deg, var(--main-color), var(--second-bg-color)); */
+    /* background: linear-gradient(purple,palevioletred) ; */
+    background-image: url('10.jpg');
+    background-position: center;
+    background-size: cover;
+    color: var(--text-color);
+}
+
+.hero h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hero .second{
+    font-size: 2rem;
+    
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: auto;
+    color: black;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 50px 20px;
+    /* background-color: var(--second-bg-color); */
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: antiquewhite;
+}
+
+
+/* Solutions Container */
+.solutions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    
+}
+
+
+.solution-box {
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.solution-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px ;
+}
+
+.solution-box h3 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.solution-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #b0b0b0;
+}
+
+
+/* Wearable Device Container*/
+/* Main container that holds both the image and the solutions */
+.layout-container1 {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: flex-start; /* Align items at the top */
+    gap: 40px; /* Space between the image and the solution boxes */
+    padding: 20px;
+}
+
+/* Image styling */
+.image-container1 img {
+    max-width: 70%; /* Adjust the image size */
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+    border: 3px solid black;
+    box-shadow: 0px 0px 20px 10px grey;
+}
+
+/* Solutions Container for vertical stack */
+.solutions-container1 {
+    display: flex;
+    flex-direction: column; /* Stack solutions vertically */
+    gap: 20px; /* Space between solution boxes */
+}
+
+/* Solution Box Styling */
+.solution-box1 {
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    width: 100%;
+    max-width: 400px; /* Limit the width */
+}
+
+.solution-box1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px ;
+}
+
+.solution-box1 h3 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.solution-box1 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #b0b0b0;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .layout-container1 {
+        flex-direction: column; /* Stack image and boxes vertically on small screens */
+        align-items: center;
+    }
+}
+
+
+
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+#contact{
+    background-image:linear-gradient(rgba(86, 78, 78, 0.7),rgba(0,0,0,0.7)),url('Contact\ image.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#contact h2{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    /* background-color: var(--second-bg-color); */
+    border: 2px solid #fff;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.contact-form form input, .contact-form form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 900;
+}
+
+/* .contact-form form input[type="submit"] {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.contact-form form input[type="submit"]:hover {
+    background-color: #00c5f6;
+} */
+
+.contact-form button{
+    width: 95%;
+    height: 40px;
+    background-color: rgb(0, 179, 255);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 179, 255);
+}
+.contact-form button:hover{
+    background-color: rgb(24, 150, 204);
+}
+
+
+/* Footer */
+footer {
+    /* background-color: var(--second-bg-color); */
+    background-color: black;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    /* border-top: 2px solid var(--main-color); */
+    font-weight: 700;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .solutions-container {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+#technology1{
+    border: 1px solid #fff;
+    /* background-color: rgb(49, 46, 46); */
+    /* background-image:linear-gradient(rgba(5, 164, 244, 0.7),rgba(13, 13, 13, 0.7)),  url('1.jpg'); */
+    background-position: center;
+    background-size: cover;
+}
+.box-content h3, .box-content1 h3,.box-content p,.box-content1 p{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.solution-box,.solution-box1{
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
